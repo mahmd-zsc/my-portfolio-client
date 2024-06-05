@@ -1,0 +1,10 @@
+.trailer {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+}/*# sourceMappingURL=mouseTrailer.css.map */
