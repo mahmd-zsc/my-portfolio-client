@@ -1,7 +1,9 @@
 "use client";
 import About from "@/components/about/about";
+import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import Landing from "@/components/landing/landing";
+import Message from "@/components/message/message";
 import MouseTrailer from "@/components/mouseTrailer/mouseTrailer";
 import Projects from "@/components/projects/projects";
 import Skills from "@/components/skills/skills";
@@ -22,10 +24,9 @@ export default function Home() {
         setHoverProject={setHoverProject}
         setHiddenMouse={setHiddenMouse}
       />
-      <About
-        setHoverProject={setHoverProject}
-        setHiddenMouse={setHiddenMouse}
-      />
+      <About setHiddenMouse={setHiddenMouse} />
+      <Message />
+      <Footer setHiddenMouse={setHiddenMouse} />
     </div>
   );
 }
