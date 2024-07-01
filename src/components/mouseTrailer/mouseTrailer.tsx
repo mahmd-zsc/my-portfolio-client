@@ -57,7 +57,7 @@ const MouseTrailer: React.FC<MouseTrailerProps> = ({
   }
 
   // Calculate trailer size based on hoverProject and isMouseDown
-  const trailerSize = hoverProject ? 120 : isMouseDown ? 30 : 12;
+  const trailerSize = hoverProject ? 120 : isMouseDown ? 10 : 12;
 
   return (
     !hiddenMouse && (

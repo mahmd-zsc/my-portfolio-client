@@ -7,24 +7,24 @@ export default function Landing({ setHiddenMouse }) {
     <div className=" bg-black  pt-[100px] pb-40 sm:pb-0 text-white relative ">
       <div className="container  ">
         <div className=" flex items-center pb-20 ">
-          <div className="flex-1 flex flex-col gap-20 relative z-30 pt-20 sm:pt-0">
+          <div className="flex-1 flex flex-col gap-20 relative z-30 pt-20 md:pt-0 ">
             <div>
               <div
                 onMouseEnter={() => setHiddenMouse(true)}
                 onMouseLeave={() => setHiddenMouse(false)}
-                className=" bg-[#1b1b1b] w-fit mx-auto sm:mx-0  px-4 py-1 rounded-full mb-12 sm:mb-6 text-sm flex items-center gap-2 hover:scale-105 duration-300"
+                className=" bg-[#1b1b1b] w-fit mx-auto md:mx-0  px-4 py-1 rounded-full mb-12 sm:mb-6 text-sm flex items-center gap-2 hover:scale-105 duration-300"
               >
                 <div className=" AvailableBall w-2 h-2 bg-green-500 rounded-full"></div>
                 <p>Available for new opportunities</p>
               </div>
-              <h1 className=" capitalize text-textColor text-5xl md:text-7xl text-center sm:text-start ">
-                mern stack developer
+              <h1 className=" capitalize text-textColor text-5xl md:text-7xl text-center md:text-start ">
+                Frontend developer
               </h1>
             </div>
 
-            <p className=" text-center sm:text-start capitalize text-textColor">
+            <p className=" text-center md:text-start capitalize text-textColor">
               If your business aims to innovate, excel, and lead in the digital
-              world...let me be your expert MERN stack developer, driving your
+              world, let me be your expert frontend developer, driving your
               vision to reality.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function Landing({ setHiddenMouse }) {
             src={myPhoto}
             alt="myPhoto"
             width={600}
-            className="hidden sm:block"
+            className="hidden md:block"
           />
         </div>
         <div className="scrolldown">

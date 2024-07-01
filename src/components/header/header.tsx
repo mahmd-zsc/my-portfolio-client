@@ -15,7 +15,7 @@ function Header({ setHiddenMouse }) {
     }, 1000);
   };
   return (
-    <div className=" absolute top-0 left-1/2 -translate-x-1/2 container z-50 ">
+    <div className=" absolute top-0 left-1/2 -translate-x-1/2 container z-10  ">
       <div className=" flex justify-between items-center py-6">
         <div
           onMouseEnter={() => setHiddenMouse(true)}
@@ -46,7 +46,7 @@ function Header({ setHiddenMouse }) {
               : " bg-white hover:bg-secoundDarkBg text-black hover:text-white "
           }  `}
         >
-          <button>
+      
             <p className="   flex items-center gap-2 text-2xl">
               <span className=" hidden md:block">
                 {!isCopy ? <MdOutlineContentCopy /> : <MdOutlineDone />}
@@ -65,7 +65,7 @@ function Header({ setHiddenMouse }) {
                 </>
               )}
             </p>
-          </button>
+         
         </div>
       </div>
     </div>

@@ -34,17 +34,21 @@ function About({ setHiddenMouse }) {
           </a>
         </div>
         <div className=" grid lg:grid-cols-2 gap-8 items-center lg:px-20 ">
-          <Image src={me} alt="my photo" className=" p-16 w-full rounded-2xl   " />
+          <Image
+            src={me}
+            alt="my photo"
+            className=" p-16 w-full rounded-2xl   "
+          />
           <div className=" text-textColor relative z-30 text-xl md:text-2xl text-center md:text-start ">
             <p className=" mb-16">
-              Hello! I'm mohamed mahmoud, an MERN stack developer.
+              Hello! I'm mohamed mahmoud, an Frontend developer.
             </p>
             <p>
               I specialize in designing and building dynamic, high-performance
-              web applications that not only engage users but also drive
-              substantial business growth. My expertise lies in leveraging
-              MongoDB, Express.js, React, and Node.js to create seamless,
-              scalable solutions tailored to your unique needs.
+              web applications that captivate users and drive substantial
+              business growth. My expertise lies in leveraging modern frontend
+              technologies and frameworks to create seamless, responsive, and
+              visually appealing user interfaces tailored to your unique needs.
             </p>
             <div
               onMouseEnter={() => setHiddenMouse(true)}
