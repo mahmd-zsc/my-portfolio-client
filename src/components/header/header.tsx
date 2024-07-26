@@ -46,26 +46,22 @@ function Header({ setHiddenMouse }) {
               : " bg-white hover:bg-secoundDarkBg text-black hover:text-white "
           }  `}
         >
-      
-            <p className="   flex items-center gap-2 text-2xl">
-              <span className=" hidden md:block">
-                {!isCopy ? <MdOutlineContentCopy /> : <MdOutlineDone />}
-              </span>
-              {!isCopy ? (
-                <>
-                  <span className=" hidden md:block">
-                    moma8607914@gmail.com
-                  </span>
-                  <span className="  md:hidden text-lg">contact</span>
-                </>
-              ) : (
-                <>
-                  <span className="hidden md:block">copied</span>
-                  <span className="md:hidden text-lg">copied email</span>
-                </>
-              )}
-            </p>
-         
+          <p className="   flex items-center gap-2 text-2xl">
+            <span className=" hidden md:block">
+              {!isCopy ? <MdOutlineContentCopy /> : <MdOutlineDone />}
+            </span>
+            {!isCopy ? (
+              <>
+                <span className=" hidden md:block">moma8607914@gmail.com</span>
+                <span className="  md:hidden text-lg">contact</span>
+              </>
+            ) : (
+              <>
+                <span className="hidden md:block">copied</span>
+                <span className="md:hidden text-lg">copied email</span>
+              </>
+            )}
+          </p>
         </div>
       </div>
     </div>

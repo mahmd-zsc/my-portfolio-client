@@ -1,21 +1,25 @@
-"server side"
+import axios from "axios";
+import React, { useCallback, useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 import pattern from "@/images/black-plain-concrete-textured.jpg";
 import Image from "next/image";
 import project from "@/images/Untitled.png";
-import { FaGithub } from "react-icons/fa";
-const fetchProjects = async () => {
-  try {
-    const response = await fetch("http://localhost:8000/api/projects");
-    const data = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error("Failed to fetch projects:", error);
-  }
-};
-async function Projects({ setHoverProject, setHiddenMouse, setProjectSide }) {
+function Projects({ setHoverProject, setHiddenMouse, setProjectSide }) {
+  const [projects, setProjects] = useState([]);
 
-  let projects = await fetchProjects();
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        setProjects(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-black relative py-10">
@@ -39,7 +43,7 @@ async function Projects({ setHoverProject, setHiddenMouse, setProjectSide }) {
           </a>
         </div>
         <div className="grid lg:grid-cols-2 gap-10 overflow-hidden relative z-30 w-full">
-          {/* {  projects.map((_, index) => (
+          {projects.slice(0,8).map((_, index) => (
             <div
               onMouseEnter={() => setHoverProject(true)}
               onMouseLeave={() => setHoverProject(false)}
@@ -54,7 +58,7 @@ async function Projects({ setHoverProject, setHiddenMouse, setProjectSide }) {
               />
               <div className="absolute w-full h-full left-0 top-0 bg-black opacity-10 hover:opacity-0 duration-300" />
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
       <Image
