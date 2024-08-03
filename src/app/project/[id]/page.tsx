@@ -25,7 +25,7 @@ function Page() {
       setLoading(true);
       setError("");
       axios
-        .get(`http://localhost:8000/api/projects/${projectId}`)
+        .get(`https://portfolio-backend-topaz-three.vercel.app/api/projects/${projectId}`)
         .then((response) => {
           setData(response.data);
           setLoading(false);

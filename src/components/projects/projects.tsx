@@ -12,7 +12,7 @@ function Projects({ setHoverProject, setHiddenMouse }) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:8000/api/projects");
+        const response = await axios.get("https://portfolio-backend-topaz-three.vercel.app/api/projects");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
