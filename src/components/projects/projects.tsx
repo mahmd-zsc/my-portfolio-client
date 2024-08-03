@@ -5,14 +5,35 @@ import Image from "next/image";
 import Link from "next/link";
 import pattern from "@/images/black-plain-concrete-textured.jpg";
 
-function Projects({ setHoverProject, setHiddenMouse }) {
-  const [projects, setProjects] = useState([]);
-  const [error, setError] = useState(null);
+interface Project {
+  _id: string;
+  image: {
+    small: {
+      url: string;
+      width?: number;
+      height?: number;
+    };
+  };
+}
+
+interface ProjectsProps {
+  setHoverProject: (hover: boolean) => void;
+  setHiddenMouse: (hidden: boolean) => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({
+  setHoverProject,
+  setHiddenMouse,
+}) => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("https://portfolio-backend-sable-delta.vercel.app/api/projects");
+        const response = await axios.get(
+          "https://portfolio-backend-sable-delta.vercel.app/api/projects"
+        );
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -30,8 +51,8 @@ function Projects({ setHoverProject, setHiddenMouse }) {
           <a
             href="https://github.com/mahmd-zsc"
             target="_blank"
-            className="cursor-none"
             rel="noopener noreferrer"
+            className="cursor-none"
           >
             <div
               onMouseEnter={() => setHiddenMouse(true)}
@@ -45,19 +66,19 @@ function Projects({ setHoverProject, setHiddenMouse }) {
         </div>
         {error && <div className="text-center text-red-500 mb-4">{error}</div>}
         <div className="grid lg:grid-cols-2 gap-10 overflow-hidden relative z-30 w-full">
-          {projects.map((e, index) => (
-            <Link  href={`/project/${e._id}`} key={index} passHref>
+          {projects.map((project) => (
+            <Link href={`/project/${project._id}`} key={project._id} passHref>
               <div
                 onMouseEnter={() => setHoverProject(true)}
                 onMouseLeave={() => setHoverProject(false)}
-                className="relative overflow-hidden rounded-2xl cursor-none"
+                className="relative overflow-hidden rounded-2xl cursor-pointer"
               >
                 <Image
                   className="duration-300 filter hover:scale-105"
-                  src={e.image.small.url}
-                  alt="project"
-                  width={e.image.small.width || 600} // Provide default if dimensions are not available
-                  height={e.image.small.height || 400} // Provide default if dimensions are not available
+                  src={project.image.small.url}
+                  alt="Project thumbnail"
+                  width={project.image.small.width || 600} // Provide default if dimensions are not available
+                  height={project.image.small.height || 400} // Provide default if dimensions are not available
                   layout="responsive"
                 />
                 <div className="absolute w-full h-full left-0 top-0 bg-black opacity-10 hover:opacity-0 duration-300" />
@@ -68,12 +89,12 @@ function Projects({ setHoverProject, setHiddenMouse }) {
         <Image
           className="absolute w-full h-full left-0 top-0 opacity-20"
           src={pattern}
-          alt="pattern"
+          alt="Decorative pattern background"
         />
       </div>
       <div className="absolute w-full h-full left-0 top-0"></div>
     </div>
   );
-}
+};
 
 export default Projects;

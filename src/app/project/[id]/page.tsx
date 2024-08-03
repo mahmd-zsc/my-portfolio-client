@@ -1,15 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation"; // استخدام useParams من next/navigation
-import pattern from "@/images/screencapture-zamalek-omega-vercel-app-2024-08-03-07_18_46 (1).png";
 import Image from "next/image";
 import axios from "axios";
-import Header from "@/components/header/header";
 import Loading from "@/app/loading";
 import { FaGithub } from "react-icons/fa";
-import { MdOutlineWebAsset } from "react-icons/md";
 import { GrSend } from "react-icons/gr";
-import { AiOutlineRollback } from "react-icons/ai";
 import { IoCaretBackCircle } from "react-icons/io5";
 import Link from "next/link";
 
@@ -25,7 +21,9 @@ function Page() {
       setLoading(true);
       setError("");
       axios
-        .get(`https://portfolio-backend-sable-delta.vercel.app/api/projects/${projectId}`)
+        .get(
+          `https://portfolio-backend-sable-delta.vercel.app/api/projects/${projectId}`
+        )
         .then((response) => {
           setData(response.data);
           setLoading(false);
@@ -53,9 +51,9 @@ function Page() {
           {data && (
             <div className=" ">
               <div className="py-20 px-10 lg:px-40 xl:px-52">
-                {/* <IoCaretBackCircle className=" text-4xl mb-10 " /> */}
+                
                 <Link href="/" className=" cursor-none">
-                  <div className=" bg-secoundDarkBg w-fit  flex justify-center items-center text-xs px-2 py-1 rounded-full  gap-2 hover:text-black hover:bg-gray-300 duration-300 hover:scale-105 text-white">
+                  <div className=" bg-secoundDarkBg w-fit mb-4  flex justify-center items-center text-xs px-2 py-1 rounded-full  gap-2 hover:text-black hover:bg-gray-300 duration-300 hover:scale-105 text-white">
                     <IoCaretBackCircle />
                     <span>back</span>
                   </div>
@@ -101,7 +99,7 @@ function Page() {
                             Skills
                           </td>
                           <td className="flex flex-wrap gap-4 md:w-2/3">
-                            {data.skills.map((s) => (
+                            {data.skills.map((s: any) => (
                               <a
                                 key={s._id}
                                 href={s.link}
