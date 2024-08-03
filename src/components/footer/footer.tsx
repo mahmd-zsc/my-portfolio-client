@@ -1,72 +1,55 @@
 import Image from "next/image";
 import pattern from "@/images/black-plain-concrete-textured.jpg";
 
-function Footer({ setHiddenMouse }) {
+interface FooterProps {
+  setHiddenMouse: (hidden: boolean) => void;
+}
+
+function Footer({ setHiddenMouse }: FooterProps) {
   return (
     <footer className="bg-black relative py-10">
-      <div className="relative z-30 flex gap-8 flex-col md:flex-row justify-between items-center text-textColor container lg:px-20">
-        <p className="text-sm order-2 md:order-1 ">© 2024 - Mohamed Mahmoud</p>
-        <ul className="flex gap-4 space-x-4 order-1 md:order-2  ">
-          <li
-            className=" hover:scale-105 duration-200"
-            onMouseEnter={() => setHiddenMouse(true)}
-            onMouseLeave={() => setHiddenMouse(false)}
-          >
-            <a
-              className="cursor-none hover:text-orange-300    duration-300"
-              href="https://www.linkedin.com/in/mohamed-mahmound-b160b2270/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
+      <div className="relative z-30 flex flex-col md:flex-row gap-8 justify-between items-center text-textColor container lg:px-20">
+        <p className="text-sm order-2 md:order-1">© 2024 - Mohamed Mahmoud</p>
+        <ul className="flex gap-4 order-1 md:order-2">
+          {[
+            {
+              href: "https://www.linkedin.com/in/mohamed-mahmound-b160b2270/",
+              label: "LinkedIn",
+              ariaLabel: "LinkedIn",
+            },
+            {
+              href: "https://github.com/mahmd-zsc",
+              label: "GitHub",
+              ariaLabel: "GitHub",
+            },
+            {
+              href: "mailto:moma8607914@gmail.com",
+              label: "Email",
+              ariaLabel: "Email",
+            },
+            {
+              href: "https://drive.google.com/file/d/1UQGNi7HEbFqKX-9lWbLDkuMMLOomz7y3/view",
+              label: "Resume",
+              ariaLabel: "Resume",
+            },
+          ].map(({ href, label, ariaLabel }) => (
+            <li
+              key={href}
+              className="hover:scale-105 duration-200"
+              onMouseEnter={() => setHiddenMouse(true)}
+              onMouseLeave={() => setHiddenMouse(false)}
             >
-              LinkedIn
-            </a>
-          </li>
-          <li
-            className="hover:scale-105 duration-200"
-            onMouseEnter={() => setHiddenMouse(true)}
-            onMouseLeave={() => setHiddenMouse(false)}
-          >
-            <a
-              className="cursor-none hover:text-orange-300    duration-300"
-              href="https://github.com/mahmd-zsc"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              GitHub
-            </a>
-          </li>
-          <li
-            className="hover:scale-105 duration-200"
-            onMouseEnter={() => setHiddenMouse(true)}
-            onMouseLeave={() => setHiddenMouse(false)}
-          >
-            <a
-              className="cursor-none hover:text-orange-300    duration-300"
-              href="mailto:moma8607914@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Email"
-            >
-              Email
-            </a>
-          </li>
-          <li
-            className="hover:scale-105 duration-200"
-            onMouseEnter={() => setHiddenMouse(true)}
-            onMouseLeave={() => setHiddenMouse(false)}
-          >
-            <a
-              className="cursor-none hover:text-orange-300    duration-300"
-              href="https://drive.google.com/file/d/1UQGNi7HEbFqKX-9lWbLDkuMMLOomz7y3/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Resume"
-            >
-              Resume
-            </a>
-          </li>
+              <a
+                className="cursor-none hover:text-orange-300 duration-300"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={ariaLabel}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <Image
