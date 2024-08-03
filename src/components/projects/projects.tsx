@@ -12,7 +12,7 @@ function Projects({ setHoverProject, setHiddenMouse }) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("https://portfolio-backend-topaz-three.vercel.app/api/projects");
+        const response = await axios.get("https://portfolio-backend-sable-delta.vercel.app/api/projects");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -46,11 +46,11 @@ function Projects({ setHoverProject, setHiddenMouse }) {
         {error && <div className="text-center text-red-500 mb-4">{error}</div>}
         <div className="grid lg:grid-cols-2 gap-10 overflow-hidden relative z-30 w-full">
           {projects.map((e, index) => (
-            <Link href={`/project/${e._id}`} key={index} passHref>
+            <Link  href={`/project/${e._id}`} key={index} passHref>
               <div
                 onMouseEnter={() => setHoverProject(true)}
                 onMouseLeave={() => setHoverProject(false)}
-                className="relative overflow-hidden rounded-2xl cursor-pointer"
+                className="relative overflow-hidden rounded-2xl cursor-none"
               >
                 <Image
                   className="duration-300 filter hover:scale-105"

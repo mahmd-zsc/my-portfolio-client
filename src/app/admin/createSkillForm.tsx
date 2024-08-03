@@ -25,7 +25,7 @@ const CreateSkillForm: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://portfolio-backend-topaz-three.vercel.app/api/skills",
+        "https://portfolio-backend-sable-delta.vercel.app/api/skills",
         data
       );
       setSubmitMessage("Skill created successfully!");

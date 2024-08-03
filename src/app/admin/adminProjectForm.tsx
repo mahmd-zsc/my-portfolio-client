@@ -34,7 +34,7 @@ const AdminProjectForm: React.FC = () => {
     const fetchSkills = async () => {
       try {
         const response = await axios.get(
-          "https://portfolio-backend-topaz-three.vercel.app/api/skills"
+          "https://portfolio-backend-sable-delta.vercel.app/api/skills"
         );
         const skillOptions = response.data.map((skill: Skill) => ({
           value: skill._id,
@@ -67,7 +67,7 @@ const AdminProjectForm: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://portfolio-backend-topaz-three.vercel.app/api/projects",
+        "https://portfolio-backend-sable-delta.vercel.app/api/projects",
         formData,
         {
           headers: {
