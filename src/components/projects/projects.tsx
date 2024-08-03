@@ -1,21 +1,22 @@
 import axios from "axios";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import pattern from "@/images/black-plain-concrete-textured.jpg";
 import Image from "next/image";
-import project from "@/images/Untitled.png";
-function Projects({ setHoverProject, setHiddenMouse, setProjectSide }) {
+import Link from "next/link";
+import pattern from "@/images/black-plain-concrete-textured.jpg";
+
+function Projects({ setHoverProject, setHiddenMouse }) {
   const [projects, setProjects] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/posts"
-        );
+        const response = await axios.get("http://localhost:8000/api/projects");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setError("Error fetching projects. Please try again later.");
       }
     }
     fetchData();
@@ -42,30 +43,34 @@ function Projects({ setHoverProject, setHiddenMouse, setProjectSide }) {
             </div>
           </a>
         </div>
+        {error && <div className="text-center text-red-500 mb-4">{error}</div>}
         <div className="grid lg:grid-cols-2 gap-10 overflow-hidden relative z-30 w-full">
-          {projects.slice(0,8).map((_, index) => (
-            <div
-              onMouseEnter={() => setHoverProject(true)}
-              onMouseLeave={() => setHoverProject(false)}
-              onClick={() => setProjectSide(true)}
-              key={index}
-              className="relative overflow-hidden rounded-2xl"
-            >
-              <Image
-                className="duration-300 filter hover:scale-105"
-                src={project}
-                alt="project"
-              />
-              <div className="absolute w-full h-full left-0 top-0 bg-black opacity-10 hover:opacity-0 duration-300" />
-            </div>
+          {projects.map((e, index) => (
+            <Link href={`/project/${e._id}`} key={index} passHref>
+              <div
+                onMouseEnter={() => setHoverProject(true)}
+                onMouseLeave={() => setHoverProject(false)}
+                className="relative overflow-hidden rounded-2xl cursor-pointer"
+              >
+                <Image
+                  className="duration-300 filter hover:scale-105"
+                  src={e.image.small.url}
+                  alt="project"
+                  width={e.image.small.width || 600} // Provide default if dimensions are not available
+                  height={e.image.small.height || 400} // Provide default if dimensions are not available
+                  layout="responsive"
+                />
+                <div className="absolute w-full h-full left-0 top-0 bg-black opacity-10 hover:opacity-0 duration-300" />
+              </div>
+            </Link>
           ))}
         </div>
+        <Image
+          className="absolute w-full h-full left-0 top-0 opacity-20"
+          src={pattern}
+          alt="pattern"
+        />
       </div>
-      <Image
-        className="absolute w-full h-full left-0 top-0 opacity-20 touch-none"
-        src={pattern}
-        alt="pattern"
-      />
       <div className="absolute w-full h-full left-0 top-0"></div>
     </div>
   );
