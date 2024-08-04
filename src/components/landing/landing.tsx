@@ -22,11 +22,10 @@ export default function Landing({ setHiddenMouse }: LandingProps) {
             <div
               onMouseEnter={() => setHiddenMouse(true)}
               onMouseLeave={() => setHiddenMouse(false)}
-              className="bg-[#1b1b1b] w-fit mx-auto md:mx-0 px-4 py-1 rounded-full mb-12 sm:mb-6 text-sm flex items-center gap-2 hover:scale-105 duration-300"
-              aria-label="Availability status"
-              data-aos="fade-in" // AOS animation on scroll
+              className="bg-[#1b1b1b] w-fit mx-auto md:mx-0 px-4 py-1  rounded-full mb-12 sm:mb-6 text-sm flex items-center gap-2 hover:scale-105 duration-300"
+              aria-label="Availability status "
             >
-              <div className="AvailableBall w-2 h-2 bg-green-500 rounded-full"></div>
+              <div className="AvailableBall w-2 h-2 bg-green-500 rounded-full hov"></div>
               <p>Available for new opportunities</p>
             </div>
             <h1

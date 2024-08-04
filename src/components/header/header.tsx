@@ -61,7 +61,6 @@ function Header({ setHiddenMouse }: HeaderProps) {
               ? "bg-secoundDarkBg hover:bg-white text-textColor hover:text-black duration-300"
               : "bg-white hover:bg-secoundDarkBg text-black hover:text-white"
           }`}
-          data-aos="flip-left"
           data-aos-delay="900"
         >
           <p className="flex items-center gap-2 text-2xl">
