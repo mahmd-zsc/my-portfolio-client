@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private/
+Allow: /public/
+Sitemap: https://my-portfolio-client-black.vercel.app/sitemap.xml
