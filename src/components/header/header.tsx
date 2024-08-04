@@ -22,12 +22,21 @@ function Header({ setHiddenMouse }: HeaderProps) {
   };
 
   return (
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 container z-10">
-      <div className="flex justify-between items-center py-6">
+    <div
+      className="absolute top-0 left-0 -translate-x-1/2 container z-10"
+      data-aos="fade-down"
+    >
+      <div
+        className="flex justify-between items-center py-6"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         <div
           onMouseEnter={() => setHiddenMouse(true)}
           onMouseLeave={() => setHiddenMouse(false)}
           className="relative hover:scale-125 duration-200"
+          data-aos="zoom-in"
+          data-aos-delay="600"
         >
           <Image
             src={logo}
@@ -52,6 +61,8 @@ function Header({ setHiddenMouse }: HeaderProps) {
               ? "bg-secoundDarkBg hover:bg-white text-textColor hover:text-black duration-300"
               : "bg-white hover:bg-secoundDarkBg text-black hover:text-white"
           }`}
+          data-aos="flip-left"
+          data-aos-delay="900"
         >
           <p className="flex items-center gap-2 text-2xl">
             <span className="hidden md:block">

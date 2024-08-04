@@ -1,15 +1,21 @@
 import Image from "next/image";
 import pattern from "@/images/black-plain-concrete-textured.jpg";
+import { useEffect } from "react";
+
 
 interface FooterProps {
   setHiddenMouse: (hidden: boolean) => void;
 }
 
 function Footer({ setHiddenMouse }: FooterProps) {
+
+
   return (
     <footer className="bg-black relative py-10">
       <div className="relative z-30 flex flex-col md:flex-row gap-8 justify-between items-center text-textColor container lg:px-20">
-        <p className="text-sm order-2 md:order-1">© 2024 - Mohamed Mahmoud</p>
+        <p className="text-sm order-2 md:order-1" data-aos="fade-up">
+          © 2024 - Mohamed Mahmoud
+        </p>
         <ul className="flex gap-4 order-1 md:order-2">
           {[
             {
@@ -38,6 +44,8 @@ function Footer({ setHiddenMouse }: FooterProps) {
               className="hover:scale-105 duration-200"
               onMouseEnter={() => setHiddenMouse(true)}
               onMouseLeave={() => setHiddenMouse(false)}
+              data-aos="fade-up" // AOS animation on scroll
+              data-aos-delay="100" // Delay for staggered effect
             >
               <a
                 className="cursor-none hover:text-orange-300 duration-300"

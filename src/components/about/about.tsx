@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
 import me from "@/images/me-darkpng.png";
 import { useState } from "react";
+
 import { MdOutlineContentCopy, MdOutlineDone } from "react-icons/md";
 
 interface AboutProps {
@@ -11,6 +12,8 @@ interface AboutProps {
 
 function About({ setHiddenMouse }: AboutProps) {
   const [isCopy, setIsCopy] = useState(false);
+
+
 
   const handleCopy = () => {
     navigator.clipboard.writeText("moma8607914@gmail.com");
@@ -23,7 +26,10 @@ function About({ setHiddenMouse }: AboutProps) {
   return (
     <div className="bg-black relative py-10">
       <div className="container overflow-hidden">
-        <div className="mb-20 text-center text-textColor text-3xl capitalize font-bold relative z-30">
+        <div
+          className="mb-20 text-center text-textColor text-3xl capitalize font-bold relative z-30"
+          data-aos="fade-up" // AOS animation on scroll
+        >
           <h3>About</h3>
           <a
             href="https://www.linkedin.com/in/mohamed-mahmound-b160b2270/"
@@ -36,19 +42,27 @@ function About({ setHiddenMouse }: AboutProps) {
               onMouseLeave={() => setHiddenMouse(false)}
               className="bg-secoundDarkBg w-fit m-auto flex justify-center items-center text-sm px-2 py-1 rounded-full mt-6 gap-2 hover:text-black hover:bg-white duration-300 hover:scale-105"
               aria-label="Connect on LinkedIn"
+              data-aos="fade-in" // AOS animation on scroll
             >
               <span>Connect on LinkedIn</span>
               <FaLinkedin />
             </div>
           </a>
         </div>
-        <div className="grid lg:grid-cols-2 gap-8 items-center lg:px-20">
+        <div
+          className="grid lg:grid-cols-2 gap-8 items-center lg:px-20"
+          data-aos="fade-up" // AOS animation on scroll
+        >
           <Image
             src={me}
             alt="A photo of Mohamed Mahmoud"
             className="p-16 w-full rounded-2xl"
+            data-aos="zoom-in" // AOS animation on scroll
           />
-          <div className="text-textColor relative z-30 text-xl md:text-2xl text-center md:text-start">
+          <div
+            className="text-textColor relative z-30 text-xl md:text-2xl text-center md:text-start"
+            data-aos="fade-up" // AOS animation on scroll
+          >
             <p className="mb-16">
               Hello! I&apos;m Mohamed Mahmoud, a Frontend developer.
             </p>
@@ -69,6 +83,7 @@ function About({ setHiddenMouse }: AboutProps) {
                   : "bg-white hover:bg-secoundDarkBg text-black hover:text-white"
               }`}
               aria-label={!isCopy ? "Copy email" : "Email copied"}
+              data-aos="fade-up" // AOS animation on scroll
             >
               <p className="flex items-center gap-2 text-2xl">
                 <span className="hidden md:block">
