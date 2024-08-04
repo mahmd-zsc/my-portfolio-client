@@ -80,7 +80,7 @@ function About({ setHiddenMouse }: AboutProps) {
                   : "bg-white hover:bg-secoundDarkBg text-black hover:text-white"
               }`}
               aria-label={!isCopy ? "Copy email" : "Email copied"}
-              data-aos="fade-up"
+              // data-aos="fade-up"
             >
               <p className="flex items-center gap-2 text-2xl">
                 <span className="hidden md:block">
