@@ -78,7 +78,7 @@ const Projects: React.FC<ProjectsProps> = ({
               <div
                 onMouseEnter={() => setHoverProject(true)}
                 onMouseLeave={() => setHoverProject(false)}
-                className="relative overflow-hidden rounded-2xl cursor-pointer"
+                className="relative overflow-hidden rounded-2xl cursor-none"
                 data-aos="zoom-in" // AOS animation on scroll
               >
                 <Image
