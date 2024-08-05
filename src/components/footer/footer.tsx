@@ -61,11 +61,11 @@ function Footer({ setHiddenMouse }: FooterProps) {
         </ul>
       </div>
       <Image
-        className="absolute w-full h-full left-0 top-0 opacity-20 pointer-events-none"
+        className="absolute w-full h-full left-0 top-0 opacity-20 touch-none"
         src={pattern}
-        alt="Concrete textured background"
+        alt="Decorative pattern background"
       />
-      <div className="absolute w-full h-full left-0 top-0 bg-black opacity-20"></div>
+      <div className="absolute w-full h-full left-0 top-0"></div>
     </footer>
   );
 }
