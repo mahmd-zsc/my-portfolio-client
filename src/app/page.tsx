@@ -11,12 +11,22 @@ import Loading from "./loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AppreciationNote from "@/components/appreciationNote/appreciationNote";
-
+interface Project {
+  _id: string;
+  image: {
+    small: {
+      url: string;
+      width?: number;
+      height?: number;
+    };
+  };
+}
 export default function Home() {
   const [hiddenMouse, setHiddenMouse] = useState(false);
   const [hoverProject, setHoverProject] = useState(false);
   const [projectId, setProjectId] = useState(""); // Currently unused; remove if not needed
   const [isLoading, setIsLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     // Initialize AOS
@@ -30,7 +40,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
+  if (isLoading && projects.length === 0) {
     return <Loading />; // Replace with a proper loading component
   }
 
@@ -42,6 +52,8 @@ export default function Home() {
       <Projects
         setHoverProject={setHoverProject}
         setHiddenMouse={setHiddenMouse}
+        projects={projects}
+        setProjects={setProjects}
       />
       <Skills
         setHoverProject={setHoverProject}

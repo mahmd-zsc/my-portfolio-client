@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import pattern from "@/images/black-plain-concrete-textured.jpg";
+
 interface Project {
   _id: string;
   image: {
@@ -14,21 +15,22 @@ interface Project {
     };
   };
 }
-
 interface ProjectsProps {
   setHoverProject: (hover: boolean) => void;
   setHiddenMouse: (hidden: boolean) => void;
+  projects: Project[];
+  setProjects: React.Dispatch<React.SetStateAction<Project[]>>;
 }
 
 const Projects: React.FC<ProjectsProps> = ({
   setHoverProject,
   setHiddenMouse,
+  projects,
+  setProjects,
 }) => {
-  const [projects, setProjects] = useState<Project[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-
     async function fetchData() {
       try {
         const response = await axios.get(
