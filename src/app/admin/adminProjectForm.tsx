@@ -7,7 +7,8 @@ import Select from "react-select";
 interface IFormInput {
   title: string;
   description: string;
-  image: FileList;
+  smallImage: FileList;
+  largeImage: FileList;
   githubLink: string;
   appLink: string;
   skills: { value: string; label: string }[];
@@ -55,8 +56,11 @@ const AdminProjectForm: React.FC = () => {
     const formData = new FormData();
     formData.append("title", data.title);
     formData.append("description", data.description);
-    if (data.image[0]) {
-      formData.append("image", data.image[0]);
+    if (data.smallImage[0]) {
+      formData.append("smallImage", data.smallImage[0]);
+    }
+    if (data.largeImage[0]) {
+      formData.append("largeImage", data.largeImage[0]);
     }
     formData.append("githubLink", data.githubLink);
     formData.append("appLink", data.appLink);
@@ -138,16 +142,32 @@ const AdminProjectForm: React.FC = () => {
 
           <div>
             <label
-              htmlFor="image"
+              htmlFor="smallImage"
               className="block text-sm font-medium text-gray-300 mb-2"
             >
-              Project Image
+              Small Project Image
             </label>
             <input
               type="file"
-              id="image"
+              id="smallImage"
               accept="image/*"
-              {...register("image")}
+              {...register("smallImage")}
+              className="w-full p-3 border border-gray-600 rounded-md bg-gray-700 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-yellow-600 file:text-white hover:file:bg-yellow-700"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="largeImage"
+              className="block text-sm font-medium text-gray-300 mb-2"
+            >
+              Large Project Image
+            </label>
+            <input
+              type="file"
+              id="largeImage"
+              accept="image/*"
+              {...register("largeImage")}
               className="w-full p-3 border border-gray-600 rounded-md bg-gray-700 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-yellow-600 file:text-white hover:file:bg-yellow-700"
             />
           </div>
@@ -207,7 +227,7 @@ const AdminProjectForm: React.FC = () => {
               id="skills"
               isMulti
               options={skills}
-              className="basic-multi-select text-black "
+              className="basic-multi-select text-black"
               classNamePrefix="select"
               onChange={(selected) => {
                 setValue(

@@ -73,16 +73,16 @@ function Page() {
                   </h1>
                   <div className="flex space-x-4 capitalize">
                     {data.githubLink && (
-                      <a href={data.githubLink} target="_blank" className="cursor-none">
-                        <div className="bg-secoundDarkBg w-fit m-auto flex justify-center items-center text-sm px-3 py-1 rounded-full mt-6 gap-2 hover:text-black hover:bg-gray-300 duration-300 hover:scale-105 text-white" data-aos="fade-left">
+                      <a href={data.githubLink} target="_blank">
+                        <div className="bg-secoundDarkBg w-fit m-auto flex justify-center items-center text-sm px-3 py-1 rounded-full mt-6 gap-2 hover:text-black hover:bg-gray-300 duration-300 hover:scale-105 text-white" >
                           <FaGithub />
                           <span>source code</span>
                         </div>
                       </a>
                     )}
                     {data.appLink && (
-                      <a href={data.appLink} target="_blank" className="cursor-none">
-                        <div className="bg-[#E41B3F] w-fit m-auto flex justify-center items-center text-sm px-3 py-1 rounded-full mt-6 gap-2 hover:text-black hover:bg-gray-300 duration-300 hover:scale-105 text-white" data-aos="fade-left">
+                      <a href={data.appLink} target="_blank">
+                        <div className="bg-[#E41B3F] w-fit m-auto flex justify-center items-center text-sm px-3 py-1 rounded-full mt-6 gap-2 hover:text-black hover:bg-gray-300 duration-300 hover:scale-105 text-white">
                           <GrSend />
                           <span>visit website</span>
                         </div>
