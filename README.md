@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mohamed Mahmoud - Frontend Developer Portfolio
 
-## Getting Started
+[![Netlify Status](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://mohamed-3.vercel.app)
+[![GitHub](https://img.shields.io/github/followers/mahmd-zsc?label=Follow&style=social)](https://github.com/mahmd-zsc)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is the portfolio website of **Mohamed Mahmoud**, a frontend developer who specializes in creating dynamic, high-performance web applications. The website showcases some of the most exciting projects built using modern web technologies, highlighting the skills and experience in frontend development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Projects](#projects)
+- [Skills](#skills)
+- [About](#about)
+- [Contact](#contact)
+- [License](#license)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Live Demo
 
-## Learn More
+Check out the live website here: [mohamed-3.vercel.app](https://mohamed-3.vercel.app)
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Portfolio Overview**: Highlights various frontend projects.
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
+- **Dark Theme**: Elegant dark theme for a smooth viewing experience.
+- **Project Showcase**: Display of some of my best works, including:
+  - Steamovie: A movie list management system.
+  - CarveCraft: A web application for woodworkers.
+  - Zamalek Store: An official online store for sportswear.
+  - Ayah: A Quranic text search tool.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- **Frontend**: 
+  - React.js
+  - Next.js
+  - Redux
+  - Tailwind CSS
+  - Sass
+  - JavaScript
+  - TypeScript
+- **Backend**: 
+  - Node.js
+  - Express.js
+  - MongoDB
+- **Tools**: 
+  - Git
+  - GitHub
+  - Cloudinary
+  - Visual Studio Code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Projects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### [Steamovie](https://github.com/mahmd-zsc/steamovie)
+A React.js-powered movie search and listing application with a modern user interface. Features include search functionality and a personalized movie watchlist.
+
+### [CarveCraft](https://github.com/mahmd-zsc/carvecraft)
+A web application dedicated to woodworkers, offering tips, tutorials, and tools for house building materials.
+
+### [Zamalek Store](https://github.com/mahmd-zsc/zamalek-store)
+An e-commerce platform for selling sportswear, built using React and Redux, with secure payment gateways.
+
+### [Ayah](https://github.com/mahmd-zsc/ayah)
+A Quran search engine using MongoDB for fast and efficient data retrieval, with multiple language support and recitations.
+
+## Skills
+
+- **Frontend**:
+  - React.js
+  - Next.js
+  - Redux
+  - TypeScript
+  - HTML5/CSS3
+  - Bootstrap
+  - Tailwind CSS
+  - Sass
+- **Backend**:
+  - Node.js
+  - Express.js
+  - MongoDB
+- **Other**:
+  - Git/GitHub
+  - Unit Testing (Jest)
+  - JWT Authentication
+  - Cloudinary for media management
+  - Figma for UI/UX design
+
+## About
+
+Hello! I'm **Mohamed Mahmoud**, a passionate frontend developer with a focus on building high-performance, user-friendly web applications. My expertise lies in modern frontend frameworks like **React.js** and **Next.js**. I aim to create seamless, visually appealing interfaces and contribute to driving business growth with cutting-edge solutions.
+
+## Contact
+
+Feel free to reach out:
+
+- **Email**: moma8607914@gmail.com
+- **GitHub**: [https://github.com/mahmd-zsc](https://github.com/mahmd-zsc)
+- **Portfolio**: [https://mohamed-3.vercel.app](https://mohamed-3.vercel.app)
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
