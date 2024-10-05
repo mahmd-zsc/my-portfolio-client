@@ -1,107 +1,29 @@
-# Mohamed Mahmoud - Frontend Developer Portfolio
+# Frontend Developer Portfolio
 
-[![Netlify Status](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://mohamed-3.vercel.app)
-[![GitHub](https://img.shields.io/github/followers/mahmd-zsc?label=Follow&style=social)](https://github.com/mahmd-zsc)
+Welcome to my personal portfolio website! This project showcases my skills, projects, and expertise as a **Frontend Developer**. It serves as a platform for potential clients, recruiters, and collaborators to explore my work and get in touch.
 
-## Overview
+## 📜 Overview
 
-This is the portfolio website of **Mohamed Mahmoud**, a frontend developer who specializes in creating dynamic, high-performance web applications. The website showcases some of the most exciting projects built using modern web technologies, highlighting the skills and experience in frontend development.
+This is a **responsive and dynamic** portfolio website that highlights my latest projects and the technologies I specialize in. The design is modern and clean, aimed at providing a seamless user experience while presenting my work in the best way possible.
 
-## Table of Contents
+Check out the live website here: [Live Portfolio](https://mohamed-3.vercel.app)
 
-- [Live Demo](#live-demo)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Projects](#projects)
-- [Skills](#skills)
-- [About](#about)
-- [Contact](#contact)
-- [License](#license)
+## ✨ Features
 
-## Live Demo
+- **Dynamic Portfolio Section**: Showcasing multiple projects with details, including live demos and GitHub repositories.
+- **Skills Showcase**: Display of my technical skills using relevant logos and icons.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewports.
+- **Dark Mode**: Toggle between light and dark themes for an enhanced user experience.
+- **Contact Information**: Easy access to contact details and external links to LinkedIn and GitHub.
 
-Check out the live website here: [mohamed-3.vercel.app](https://mohamed-3.vercel.app)
+## 🚀 Technologies Used
 
-## Features
+- **React**: Frontend library for building the UI.
+- **Next.js**: Framework for server-side rendering and static website generation.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **JavaScript (ES6+)**: Programming language used for dynamic functionality.
+- **Sass**: Preprocessor for CSS to enhance styles management.
+- **TypeScript**: For type-checking and improving code reliability.
 
-- **Portfolio Overview**: Highlights various frontend projects.
-- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
-- **Dark Theme**: Elegant dark theme for a smooth viewing experience.
-- **Project Showcase**: Display of some of my best works, including:
-  - Steamovie: A movie list management system.
-  - CarveCraft: A web application for woodworkers.
-  - Zamalek Store: An official online store for sportswear.
-  - Ayah: A Quranic text search tool.
-
-## Tech Stack
-
-- **Frontend**: 
-  - React.js
-  - Next.js
-  - Redux
-  - Tailwind CSS
-  - Sass
-  - JavaScript
-  - TypeScript
-- **Backend**: 
-  - Node.js
-  - Express.js
-  - MongoDB
-- **Tools**: 
-  - Git
-  - GitHub
-  - Cloudinary
-  - Visual Studio Code
-
-## Projects
-
-### [Steamovie](https://github.com/mahmd-zsc/steamovie)
-A React.js-powered movie search and listing application with a modern user interface. Features include search functionality and a personalized movie watchlist.
-
-### [CarveCraft](https://github.com/mahmd-zsc/carvecraft)
-A web application dedicated to woodworkers, offering tips, tutorials, and tools for house building materials.
-
-### [Zamalek Store](https://github.com/mahmd-zsc/zamalek-store)
-An e-commerce platform for selling sportswear, built using React and Redux, with secure payment gateways.
-
-### [Ayah](https://github.com/mahmd-zsc/ayah)
-A Quran search engine using MongoDB for fast and efficient data retrieval, with multiple language support and recitations.
-
-## Skills
-
-- **Frontend**:
-  - React.js
-  - Next.js
-  - Redux
-  - TypeScript
-  - HTML5/CSS3
-  - Bootstrap
-  - Tailwind CSS
-  - Sass
-- **Backend**:
-  - Node.js
-  - Express.js
-  - MongoDB
-- **Other**:
-  - Git/GitHub
-  - Unit Testing (Jest)
-  - JWT Authentication
-  - Cloudinary for media management
-  - Figma for UI/UX design
-
-## About
-
-Hello! I'm **Mohamed Mahmoud**, a passionate frontend developer with a focus on building high-performance, user-friendly web applications. My expertise lies in modern frontend frameworks like **React.js** and **Next.js**. I aim to create seamless, visually appealing interfaces and contribute to driving business growth with cutting-edge solutions.
-
-## Contact
-
-Feel free to reach out:
-
-- **Email**: moma8607914@gmail.com
-- **GitHub**: [https://github.com/mahmd-zsc](https://github.com/mahmd-zsc)
-- **Portfolio**: [https://mohamed-3.vercel.app](https://mohamed-3.vercel.app)
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
+## 📂 Project Structure
 
